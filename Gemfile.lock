@@ -1,10 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activerecord-jdbc-adapter (1.2.9)
-    activerecord-jdbcpostgresql-adapter (1.2.9)
-      activerecord-jdbc-adapter (~> 1.2.9)
-      jdbc-postgres (>= 9.1, < 9.3)
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
@@ -87,10 +83,6 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
       spoon (~> 0.0)
-    puma (1.6.3)
-      rack (~> 1.2)
-    puma (1.6.3-java)
-      rack (~> 1.2)
     rack (1.5.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -126,7 +118,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-jdbcpostgresql-adapter
   dm-core (>= 1.1.0)
   dm-migrations (>= 1.1.0)
   dm-postgres-adapter (>= 1.1.0)
@@ -138,7 +129,6 @@ DEPENDENCIES
   json
   nokogiri
   pry
-  puma
   rack-test
   rake
   rest-client
