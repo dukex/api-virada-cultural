@@ -3,6 +3,7 @@ class Stage
 
   has n, :attractions
 
+  property :id, Integer, key: true
   property :location_balloon, String
   property :location_state, String
   property :location_town, String
@@ -11,7 +12,7 @@ class Stage
   property :location_slug, String
   property :blog_id, String
   property :post_id, String
-  property :location_id, Integer, key: true
+  property :location_id, Integer
   property :location_postcode, String
   property :location_region, String
   property :location_country, String
