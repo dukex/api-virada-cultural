@@ -4,12 +4,13 @@ class ItemBot
   end
 
   def attributes_to_create
-    @item.dup
+    attributes = @item.dup
+    attributes.dup
   end
 
   def attributes_to_update
     attributes = attributes_to_create
-    attributes.delete('location_id')
+    attributes.delete('id')
     attributes
   end
 

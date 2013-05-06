@@ -3,7 +3,7 @@ class StageBot
 
   def self.each(&block)
     data.each do |item|
-      yield ItemBot.new(item)
+      yield StageItemBot.new(item)
     end
   end
 
@@ -13,5 +13,12 @@ class StageBot
 
   def self.data
     JSON.parse open(url,"User-Agent" => "Dukes Bot" ).read
+  end
+end
+
+class StageItemBot < ItemBot
+  def attributes_to_create
+    @item['id'] = @item['location_id']
+    super
   end
 end
