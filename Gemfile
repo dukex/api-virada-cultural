@@ -15,6 +15,7 @@ gem 'thin'
 #gem 'puma'
 #gem 'activerecord-jdbcpostgresql-adapter'
 gem 'rest-client'
+gem 'grape-entity'
 
 group :test, :development do
   gem 'rspec', '>= 2.0'
