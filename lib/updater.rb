@@ -10,7 +10,11 @@ class Updater
       stage.update! stage_bot.attributes_to_update
 
       AttractionBot.each(stage) do |attraction_bot|
-        next #
+        unless attraction = Attraction.get(attraction_bot.id)
+          stage.attractions.create! attraction_bot.attributes_to_create
+        else
+          attraction.update! attraction_bot.attributes_to_update
+        end
       end
     end
   end
