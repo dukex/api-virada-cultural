@@ -3,7 +3,7 @@ class StageBot
 
   def self.each(&block)
     data.each do |item|
-      yield StageBotItem.new(item)
+      yield ItemBot.new(item)
     end
   end
 
@@ -13,27 +13,5 @@ class StageBot
 
   def self.data
     JSON.parse open(url,"User-Agent" => "Dukes Bot" ).read
-  end
-end
-
-
-class StageBotItem
-  def initialize(item)
-    @item = item
-  end
-
-  def attributes_to_create
-    @item.dup
-  end
-
-  def attributes_to_update
-    attributes = attributes_to_create
-    attributes.delete('location_id')
-    attributes
-  end
-
-  def method_missing(m, *args, &block)
-    return @item["#{m}"] if @item["#{m}"]
-    super
   end
 end
