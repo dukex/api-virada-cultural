@@ -9,6 +9,7 @@ GEM
     builder (3.2.0)
     coderay (1.0.9)
     crack (0.3.2)
+    daemons (1.1.9)
     data_objects (0.10.12)
       addressable (~> 2.1)
     descendants_tracker (0.0.1)
@@ -48,6 +49,7 @@ GEM
       data_objects (= 0.10.12)
       do_jdbc (= 0.10.12)
       jdbc-sqlite3 (>= 3.5.8)
+    eventmachine (1.0.3)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     fastercsv (1.5.5)
@@ -73,6 +75,7 @@ GEM
     mime-types (1.21)
     multi_json (1.7.2)
     multi_xml (0.5.3)
+    nokogiri (1.5.9)
     nokogiri (1.5.9-java)
     pry (0.9.12.1)
       coderay (~> 1.0.5)
@@ -106,6 +109,10 @@ GEM
     slop (3.4.4)
     spoon (0.0.3)
       ffi
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     virtus (0.5.4)
       backports (~> 2.6.1)
       descendants_tracker (~> 0.0.1)
@@ -134,4 +141,5 @@ DEPENDENCIES
   rest-client
   rspec (>= 2.0)
   shotgun
+  thin
   webmock
