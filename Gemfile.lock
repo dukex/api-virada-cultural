@@ -98,8 +98,13 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.4)
+    representable (1.2.2)
+      json
+      nokogiri
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    roar (0.11.1)
+      representable (>= 1.2.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -144,6 +149,7 @@ DEPENDENCIES
   rack-test
   rake
   rest-client
+  roar
   rspec (>= 2.0)
   shotgun
   thin

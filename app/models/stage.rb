@@ -21,4 +21,12 @@ class Stage
   property :post_content, Text
   property :location_owner, String
   property :location_status, String
+
+  def stage_url
+    "http://api.viradacultural.vertigem.xxx/stages/#{self.id}"
+  end
+
+  def attractions_stage_url
+    "http://api.viradacultural.vertigem.xxx/stages/#{self.id}/attractions"
+  end
 end
