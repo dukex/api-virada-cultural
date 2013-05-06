@@ -4,6 +4,7 @@ $:.unshift models_path unless $:.include?(models_path)
 DataMapper::Logger.new($stdout, :debug)
 DataMapper.setup(:default, ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/database.sqlite3")
 
+require 'attraction'
 require 'stage'
 
 DataMapper.finalize
