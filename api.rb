@@ -9,4 +9,14 @@ require 'grape_hack'
 
 class API < Grape::API
   format :json
+
+  resources :stages do
+    get do
+      Stage.all
+    end
+
+    get :id do
+      Stage.get(params[:id])
+    end
+  end
 end
