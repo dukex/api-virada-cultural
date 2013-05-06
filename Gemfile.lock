@@ -55,7 +55,6 @@ GEM
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     fastercsv (1.5.5)
-    ffi (1.8.1)
     ffi (1.8.1-java)
     grape (0.4.1)
       activesupport
@@ -73,11 +72,12 @@ GEM
     jdbc-sqlite3 (3.7.2.1)
     json (1.7.7)
     json (1.7.7-java)
-    json-jruby (1.4.3.1-java)
     json_pure (1.7.7)
     method_source (0.8.1)
+    mime-types (1.21)
     multi_json (1.7.2)
     multi_xml (0.5.3)
+    nokogiri (1.5.9-java)
     pry (0.9.12.1)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -99,6 +99,8 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -133,11 +135,13 @@ DEPENDENCIES
   dm-validations (>= 1.1.0)
   factory_girl
   grape
-  json-jruby
+  json
+  nokogiri
   pry
   puma
   rack-test
   rake
+  rest-client
   rspec (>= 2.0)
   shotgun
   webmock
