@@ -59,7 +59,7 @@ class AttractionItemBot < ItemBot
     @item['title'] = parser.search('h3').text
     @item['description'] = parser.search('.desc-atracao').text
 
-    starts_at = Time.new(2013, 5, day == 'saturday' ? 18 : 19, hour, minutes, 0)
+    starts_at = Time.new(2013, 5, day == 'saturday' ? 18 : 19, hour, minutes, 0, "-03:00")
     @item['starts_at'] = starts_at
   end
 end
